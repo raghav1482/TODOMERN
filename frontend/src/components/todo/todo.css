@@ -1,0 +1,201 @@
+.inputTask input,textarea{
+    border: 2px solid rgb(21, 21, 57);
+    border-radius: 30px;
+    padding: 10px;
+    width: 100%;
+}
+.inputTask{
+    margin-top: 50px;
+    width: 70% !important;
+}
+.todo{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.todo-main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.todo-body{
+    flex: 1;
+    height: 700px !important;
+    margin-top: 30px;
+}
+.tsks{
+    max-height: 600px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+}
+.todo-body div{
+    padding: 0;
+    margin: 0;
+}
+.add-btn{
+  appearance: none;
+  background-color: #001c3b;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: auto;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100px;
+}
+
+.add-btn:disabled {
+  pointer-events: none;
+}
+
+.add-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.add-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.todocard{
+    width: max-content;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-wrap:wrap;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.todocard p{
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 300px;
+    max-height: 80px;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+}
+.tsk-icon{
+    cursor: pointer;
+    padding: 5px;
+    scale: 1.5;
+}
+.tsk-icon:hover{
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
+.todocard h5{
+    background-color: rgb(6, 6, 55);
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+}
+
+.body::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    margin: 5px 10px;
+  }
+   
+  /* Handle */
+  .body::-webkit-scrollbar-thumb {
+    background: rgb(159, 159, 159); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .body::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+.delupdate{
+    width: 100%;
+}
+
+.todo-update{
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  display: none;
+  top: 0;
+  position: absolute;
+  z-index: 80;
+}
+
+.todo-update-container{
+  width: 40%;
+  margin-top: 15%;
+  margin-inline: auto;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #001c3b;
+  display: flex;
+  flex-direction: column;
+}
+.up-title{
+  width: 80%;
+  margin-top: 10%;
+  margin-inline: auto;
+  height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.up-body{
+  width: 80%;
+  margin: 20px auto;
+}
+
+.updt-btn{
+  background-color: white;
+  color: #001c3b;
+}
+.close-btn{
+  background-color: #ef4040;
+}
+
+.tsks::-webkit-scrollbar {
+  width: 15px;
+}
+.tsks::-webkit-scrollbar-track{
+  margin: 5px 10px;
+}
+.tsks::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+.tsks::-webkit-scrollbar-thumb {
+  background: #0a1b48; 
+}
+
+
+@media screen and (max-width:919px) {
+    .todo{
+        flex-direction: column;
+    }
+}
