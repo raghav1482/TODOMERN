@@ -18,7 +18,7 @@ function App() {
       dispatch(authActions.login());
     }
   },[])
-  const apiurl = 'https://todobknd.onrender.com'||'http://localhost:5000';
+  const apiurl = 'https://todomern-eosin.vercel.app'||'http://localhost:5000';
   return (
     <div className="App">
       <Router>
