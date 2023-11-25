@@ -96,6 +96,7 @@
     overflow-wrap: break-word;
     overflow-y: scroll;
 }
+
 .tsk-icon{
     cursor: pointer;
     padding: 5px;
@@ -107,10 +108,12 @@
 }
 
 .todocard h5{
-    background-color: rgb(6, 6, 55);
-    padding: 10px;
+  background-color: rgb(6, 6, 55);
+  padding: 10px;
+  max-width: 300px;
     color: white;
     border-radius: 30px;
+    overflow-x: hidden;
 }
 
 .body::-webkit-scrollbar {
