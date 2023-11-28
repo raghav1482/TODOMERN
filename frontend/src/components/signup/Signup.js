@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 export default function Signup({apiurl}){
+    const [loader , setLoad] = useState(false);
     const navigate =useNavigate();
     const [Inputs , setInputs] = useState({email:"" , password:""});
     const change =(e)=>{
@@ -12,7 +13,9 @@ export default function Signup({apiurl}){
     };
     const submit =async(e)=>{
         e.preventDefault();
-        await axios.post(`${apiurl}/api/v1/register`,Inputs).then((response)=>{
+        setLoad(true);
+try{        await axios.post(`${apiurl}/api/v1/register`,Inputs).then((response)=>{
+            setLoad(false);
             if(response.data.message==="User already exist"){
                 alert(response.data.message);
             }
@@ -22,7 +25,10 @@ export default function Signup({apiurl}){
                 navigate("/signin");
                 // console.log(response);
             }
-    });
+    });}catch(e){
+        alert("ERROR : "+e);
+        setLoad(false);
+    }
     };
     return(<>
     <div className='signdiv'>
@@ -36,7 +42,9 @@ export default function Signup({apiurl}){
                         <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Email" name='email' onChange={change} value={Inputs.email}/>
                         <input type="password" className="form-control" placeholder="Password"  name='password' onChange={change} value={Inputs.password}/>
                         <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={submit}>
-                            Register</button>
+                        {loader?<><div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div></>:"Register"}</button>
                         </form>
                     </div>
                 </div>
