@@ -12,7 +12,6 @@ app.use(express.json())
 app.use(cors(
     {
         origin:["https://personaltodo.vercel.app","http://localhost:3000"],
-        methods:["POST","GET","DELETE","PUT"],
         credentials:true
     }
 ));
