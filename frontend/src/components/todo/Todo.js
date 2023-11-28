@@ -74,7 +74,7 @@ export default function Todo({apiurl}){
         </div>
     </div>  
     <div className='todo-update' id='todo-update'>
-    <Update display={dis} update={toUpdat}/>
+    <Update display={dis} update={toUpdat} apiurl={apiurl}/>
     </div>  
 </>);
 }
