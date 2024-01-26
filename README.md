@@ -20,17 +20,13 @@ Welcome to the ToDo List app! This project is a simple yet powerful task managem
 
 1. Clone this repository.
 2. Navigate to the project directory.
-3. Run `npm install` in both the `client` and `server` directories to install dependencies.
+3. Run `npm install` in both the `frontend` and `backend` directories to install dependencies.
 4. Create a MongoDB database and update the connection details in the server's `.env` file.
-5. Run `npm start` in both the client and server directories to start the application.
+5. Run `npm start` in the client and `nodemon index.js` in server directories to start the application.
 
 ## Usage
 
 - Access the application via `http://localhost:3000` after starting both the client and server.
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues and submit pull requests.
 
 ## Acknowledgements
 
